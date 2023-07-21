@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Common Available Times</title>
+</head>
+<body>
+    <h1>Common Available Times:</h1>
+    <ul>
+        {% for day, times in common_times.items() %}
+            <li>{{ day }}:
+                {% if times %}
+                    {{ times|join(', ') }}
+                {% else %}
+                    No common time slots.
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

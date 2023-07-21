@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You!</title>
+</head>
+<body>
+    <h1>Thank You for Submitting Your Availability!</h1>
+    <p>Here are the participants and their selected time slots:</p>
+    <ul>
+        {% for participant, data in participants.items() %}
+            <li>{{ participant }}:
+                <ul>
+                    <li>Monday: {{ data['Monday'] }}</li>
+                    <li>Tuesday: {{ data['Tuesday'] }}</li>
+                    <li>Wednesday: {{ data['Wednesday'] }}</li>
+		    <li>Thursday: {{ data['Thursday'] }}</li>
+		    <li>Friday: {{ data['Friday'] }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
